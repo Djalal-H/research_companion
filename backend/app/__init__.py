@@ -1,0 +1,1 @@
+"""Research Companion application."""

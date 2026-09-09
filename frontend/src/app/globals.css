@@ -1,0 +1,447 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Remove default focus box-shadows */
+  input:focus,
+  textarea:focus,
+  select:focus {
+    box-shadow: none !important;
+  }
+
+  /* Set default outline color to match brand instead of browser blue */
+  * {
+    outline-color: hsl(var(--primary));
+  }
+
+  :root {
+    /* App-specific color variables */
+    --color-primary: #202b3a;
+    --color-user-message: #ad4937;
+    --color-user-message-bg: #f8e7df;
+    --color-avatar-bg: #e8dfd0;
+    --color-secondary: #ad4937;
+    --color-success: #3e7656;
+    --color-warning: #b87925;
+    --color-error: #b8443d;
+    --color-background: #f4efe6;
+    --color-subagent-hover: #e7ddce;
+    --color-surface: #fbf8f2;
+    --color-border: #d8cdbd;
+    --color-border-light: #ebe3d6;
+    --color-text-primary: #202b3a;
+    --color-text-secondary: #5e6670;
+    --color-text-tertiary: #7c817f;
+    --color-file-button: #fffdf8;
+    --color-file-button-hover: #f1e8dc;
+
+    /* Dark theme colors */
+    --color-primary-dark: #e2b965;
+    --color-user-message-dark: #dc765d;
+    --color-avatar-bg-dark: #2b3138;
+    --color-secondary-dark: #dc765d;
+    --color-success-dark: #83bd8f;
+    --color-warning-dark: #e2b965;
+    --color-error-dark: #ef8b7f;
+    --color-background-dark: #111820;
+    --color-subagent-hover-dark: #303942;
+    --color-surface-dark: #1a232c;
+    --color-border-dark: #39434d;
+    --color-border-light-dark: #2c353e;
+    --color-text-primary-dark: #f3eee3;
+    --color-text-secondary-dark: #b5b5ad;
+    --color-text-tertiary-dark: #8f989b;
+
+    /* Spacing variables */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-2xl: 3rem;
+
+    /* Font family variables */
+    --font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      "Helvetica Neue", Arial, sans-serif;
+    --font-family-display: Georgia, "Times New Roman", serif;
+    --font-family-mono: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono",
+      Consolas, "Courier New", monospace;
+
+    /* Font size variables */
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 1.875rem;
+
+    /* Font weight variables */
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+
+    /* Line height variables */
+    --line-height-tight: 1.25;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.75;
+
+    /* Border radius variables */
+    --radius-sm: 0.25rem;
+    --radius-md: 0.375rem;
+    --radius-lg: 0.5rem;
+    --radius-full: 9999px;
+
+    /* Shadow variables */
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+      0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+    /* Transition variables */
+    --transition-base: 200ms ease;
+
+    /* Layout variables */
+    --sidebar-width: 320px;
+    --sidebar-collapsed-width: 60px;
+    --header-height: 64px;
+    --panel-width: 40vw;
+    --chat-max-width: 900px;
+
+    /* Tailwind/Radix UI component variables */
+    --radius: 0.5rem;
+    --background: 40 36% 94%;
+    --foreground: 213 29% 18%;
+    --card: 42 50% 98%;
+    --card-foreground: 213 29% 18%;
+    --popover: 42 50% 98%;
+    --popover-foreground: 213 29% 18%;
+    --primary: 213 29% 18%;
+    --primary-foreground: 42 50% 98%;
+    --secondary: 35 24% 88%;
+    --secondary-foreground: 213 29% 18%;
+    --muted: 38 24% 91%;
+    --muted-foreground: 213 10% 40%;
+    --accent: 16 55% 92%;
+    --accent-foreground: 14 41% 24%;
+    --destructive: 5 64% 51%;
+    --destructive-foreground: 42 50% 98%;
+    --border: 36 22% 80%;
+    --input: 36 22% 80%;
+    --ring: 13 67% 52%;
+    --sidebar: 39 27% 91%;
+    --chart-1: 13 67% 52%;
+    --chart-2: 213 29% 35%;
+    --chart-3: 39 74% 52%;
+    --chart-4: 144 32% 45%;
+    --chart-5: 28 62% 54%;
+
+    /* Compatibility aliases for the shared Tailwind token extensions. */
+    --bg-primary: hsl(var(--primary));
+    --bg-primary_hover: hsl(var(--primary) / 0.9);
+    --bg-secondary: hsl(var(--secondary));
+    --bg-secondary-hover: hsl(var(--secondary) / 0.8);
+    --text-primary: hsl(var(--foreground));
+    --text-secondary: hsl(var(--muted-foreground));
+    --text-tertiary: hsl(var(--muted-foreground));
+    --text-success: var(--color-success);
+    --text-warning: var(--color-warning);
+    --border-primary: hsl(var(--primary));
+    --border-secondary: hsl(var(--border));
+    --border-tertiary: hsl(var(--border));
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      /* App-specific color variables */
+      --color-primary: #e2b965;
+      --color-user-message: #dc765d;
+      --color-user-message-bg: #2d2725;
+      --color-avatar-bg: #2b3138;
+      --color-secondary: #dc765d;
+      --color-success: #83bd8f;
+      --color-warning: #e2b965;
+      --color-error: #ef8b7f;
+      --color-background: #111820;
+      --color-subagent-hover: #303942;
+      --color-surface: #1a232c;
+      --color-border: #39434d;
+      --color-border-light: #2c353e;
+      --color-text-primary: #f3eee3;
+      --color-text-secondary: #b5b5ad;
+      --color-text-tertiary: #8f989b;
+      --color-file-button: #1a232c;
+      --color-file-button-hover: #27313a;
+
+      /* Tailwind/Radix UI component variables for dark mode */
+      --radius: 0.5rem;
+      --background: 210 27% 8%;
+      --foreground: 42 34% 94%;
+      --card: 210 25% 13%;
+      --card-foreground: 42 34% 94%;
+      --popover: 210 25% 13%;
+      --popover-foreground: 42 34% 94%;
+      --primary: 39 70% 64%;
+      --primary-foreground: 210 27% 8%;
+      --secondary: 210 18% 20%;
+      --secondary-foreground: 42 34% 94%;
+      --muted: 210 18% 18%;
+      --muted-foreground: 210 9% 72%;
+      --accent: 12 26% 23%;
+      --accent-foreground: 42 34% 94%;
+      --destructive: 6 74% 67%;
+      --destructive-foreground: 210 27% 8%;
+      --border: 210 16% 27%;
+      --input: 210 16% 27%;
+      --ring: 12 74% 65%;
+      --sidebar: 210 24% 12%;
+      --chart-1: 12 74% 65%;
+      --chart-2: 39 70% 64%;
+      --chart-3: 144 43% 62%;
+      --chart-4: 210 65% 67%;
+      --chart-5: 28 72% 64%;
+    }
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: hsl(var(--primary) / 0.18);
+  color: hsl(var(--foreground));
+}
+
+*:focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--border)) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  border: 3px solid transparent;
+  border-radius: 999px;
+  background-clip: padding-box;
+  background-color: hsl(var(--border));
+}
+
+details > summary {
+  text-underline-offset: 3px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--color-text-primary);
+  font-family: var(--font-family-display);
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: 1.875rem;
+}
+h2 {
+  font-size: 1.5rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 1.125rem;
+}
+h5 {
+  font-size: 1rem;
+}
+h6 {
+  font-size: 0.875rem;
+}
+
+p {
+  margin-bottom: 1rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: opacity 200ms ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+code {
+  font-family: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas,
+    "Courier New", monospace;
+  font-size: 0.9em;
+  padding: 0.125em 0.25em;
+  background-color: var(--color-surface);
+  border-radius: 0.25rem;
+}
+
+pre {
+  font-family: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas,
+    "Courier New", monospace;
+  font-size: 0.875rem;
+  line-height: 1.75;
+  padding: 1rem;
+  background-color: var(--color-surface);
+  border-radius: 0.375rem;
+  overflow-x: auto;
+
+  code {
+    padding: 0;
+    background-color: transparent;
+  }
+}
+
+ul,
+ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+li {
+  margin-bottom: 0.25rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Optimization Window animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Custom scrollbar styles */
+.scrollbar-pretty {
+  overflow-y: scroll;
+}
+
+.scrollbar-pretty::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-pretty::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-pretty::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--border));
+  border-radius: 9999px;
+}
+
+.scrollbar-pretty::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(var(--muted-foreground));
+}
+
+/* Global diff highlighting styles */
+.word-added {
+  background-color: rgba(46, 160, 67, 0.4);
+  color: #ffffff;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+.word-removed {
+  background-color: rgba(248, 81, 73, 0.4);
+  color: #ffffff;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-weight: 600;
+  text-decoration: line-through;
+  text-decoration-color: #f85149;
+}

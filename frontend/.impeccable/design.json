@@ -1,0 +1,188 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-09T00:00:00.000Z",
+  "title": "Design System: Research Companion",
+  "extensions": {
+    "colorMeta": {
+      "ink-navy": {
+        "role": "primary",
+        "displayName": "Ink Navy",
+        "canonical": "#202b3a",
+        "tonalRamp": [
+          "#111820",
+          "#17202b",
+          "#202b3a",
+          "#354454",
+          "#566474",
+          "#7c8790",
+          "#b8b8af",
+          "#fbf8f2"
+        ]
+      },
+      "rust-evidence": {
+        "role": "secondary",
+        "displayName": "Rust Evidence",
+        "canonical": "#ad4937",
+        "tonalRamp": [
+          "#3f1914",
+          "#64251c",
+          "#8a382a",
+          "#ad4937",
+          "#c86a55",
+          "#dc9a86",
+          "#edc2b5",
+          "#f8e7df"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "#f4efe6",
+        "tonalRamp": [
+          "#202b3a",
+          "#39434d",
+          "#6b7378",
+          "#a5a39a",
+          "#c9c2b5",
+          "#ded6c9",
+          "#ebe3d6",
+          "#fbf8f2"
+        ]
+      },
+      "brass-active": {
+        "role": "tertiary",
+        "displayName": "Brass Active",
+        "canonical": "#e2b965",
+        "tonalRamp": [
+          "#4d3814",
+          "#78591e",
+          "#a17a2b",
+          "#c49a42",
+          "#e2b965",
+          "#ebc982",
+          "#f2dba9",
+          "#fff4d6"
+        ]
+      },
+      "field-success": {
+        "role": "tertiary",
+        "displayName": "Field Success",
+        "canonical": "#3e7656",
+        "tonalRamp": [
+          "#163121",
+          "#214a33",
+          "#2f6046",
+          "#3e7656",
+          "#65947a",
+          "#8eb19a",
+          "#b9d0bd",
+          "#e5f0e5"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Notebook Serif",
+        "purpose": "Product, dialog, and empty-state headings."
+      },
+      "body": {
+        "displayName": "Interface Sans",
+        "purpose": "Conversation copy and practical interface text."
+      },
+      "label": {
+        "displayName": "Instrument Label",
+        "purpose": "Metadata and system-region labels only."
+      }
+    },
+    "shadows": [
+      {
+        "name": "low-lift",
+        "value": "0 1px 2px rgba(32, 43, 58, 0.06)",
+        "purpose": "Small raised controls and composer."
+      },
+      {
+        "name": "dialog-lift",
+        "value": "0 20px 25px -5px rgba(32, 43, 58, 0.12), 0 10px 10px -5px rgba(32, 43, 58, 0.06)",
+        "purpose": "Protected modal surfaces."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-standard",
+        "value": "200ms ease",
+        "purpose": "Compact hover, focus, and disclosure transitions."
+      }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The high-confidence action for sending, saving, or starting work.",
+      "html": "<button class=\"ds-btn-primary\"><svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M3 8h9M8 4l4 4-4 4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>Send</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 8px; background: #202b3a; color: #fbf8f2; border: 1px solid #202b3a; border-radius: 8px; padding: 8px 16px; font: 600 14px/20px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; transition: background 200ms ease, border-color 200ms ease, box-shadow 200ms ease; } .ds-btn-primary:hover { background: #ad4937; border-color: #ad4937; } .ds-btn-primary:focus-visible { outline: 2px solid #ad4937; outline-offset: 2px; } .ds-btn-primary svg { width: 16px; height: 16px; }"
+    },
+    {
+      "name": "Input Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "A quiet paper field that gains a rust focus ring when active.",
+      "html": "<input class=\"ds-input\" placeholder=\"Ask Research Companion…\" aria-label=\"Research message\"/>",
+      "css": ".ds-input { width: 100%; background: #fbf8f2; color: #202b3a; border: 1px solid #d8cdbd; border-radius: 8px; padding: 10px 12px; font: 400 14px/20px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; } .ds-input::placeholder { color: #5e6670; } .ds-input:focus-visible { outline: 2px solid #ad4937; outline-offset: 2px; border-color: #ad4937; }"
+    },
+    {
+      "name": "Evidence Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "A bordered evidence block that keeps provenance close to the excerpt.",
+      "html": "<blockquote class=\"ds-evidence\"><p>Source excerpt</p><small>source:record · evidence</small></blockquote>",
+      "css": ".ds-evidence { margin: 0; background: #f4efe6; color: #202b3a; border: 1px solid #d8cdbd; border-radius: 8px; padding: 12px; font: 400 14px/24px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; } .ds-evidence p { margin: 0 0 6px; } .ds-evidence small { color: #5e6670; font: 600 11px/16px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; letter-spacing: .06em; text-transform: uppercase; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Research Field Notes",
+    "overview": "Research Companion now feels like a working archive: warm paper, ink-blue structure, and deliberate marks for evidence, attention, and state. The interface is calm enough for sustained reading but has a visible point of view suited to a portfolio artifact about agentic research and persistent memory.\n\nThe system uses editorial contrast instead of generic dashboard gray. Serif headings give the product a human, note-taking voice; the body remains a pragmatic system sans for scanability; monospace stays reserved for IDs, timestamps, arguments, and source material. Surfaces are layered tonally with restrained shadows, while rust and brass are reserved for meaningful signals.",
+    "keyCharacteristics": [
+      "Warm paper canvas with ink-navy structure.",
+      "Rust evidence marks and brass active states.",
+      "Editorial serif headings with utilitarian sans body copy.",
+      "Rounded, tactile controls with quiet borders.",
+      "Evidence and state remain visible without decorative noise."
+    ],
+    "rules": [
+      {
+        "name": "The Evidence Mark Rule",
+        "body": "Rust and brass should communicate a state or provenance cue; never use them as ambient decoration.",
+        "section": "colors"
+      },
+      {
+        "name": "The Instrument Rule",
+        "body": "Monospace is for information that behaves like an instrument reading—not for the whole interface.",
+        "section": "typography"
+      },
+      {
+        "name": "The Quiet Surface Rule",
+        "body": "A surface is either separated by a border or a shadow; use both only when the component needs protected focus.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do use warm paper, ink navy, rust, and brass as functional visual language.",
+      "Do reserve monospace for source IDs, arguments, timestamps, and code.",
+      "Do make memory provenance and state readable within seconds.",
+      "Do keep borders quiet and use one elevation treatment per surface."
+    ],
+    "donts": [
+      "Don't bring back the teal/gray dashboard palette.",
+      "Don't use gradients, glass, or decorative blur as theme substitutes.",
+      "Don't use thick colored side borders for evidence, alerts, or cards.",
+      "Don't use accent colors without a state, provenance, or interaction reason."
+    ]
+  }
+}

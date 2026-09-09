@@ -1,0 +1,140 @@
+<svg width="1600" height="940" viewBox="0 0 1600 940" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Research Companion interface preview</title>
+  <desc id="desc">A dark teal research chat interface with a conversation, plan, report file, and recalled project memory panel.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="940" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7FAF9"/>
+      <stop offset="1" stop-color="#EAF2F0"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#163B3B" flood-opacity="0.12"/>
+    </filter>
+    <filter id="smallShadow" x="-20%" y="-20%" width="140%" height="150%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#163B3B" flood-opacity="0.08"/>
+    </filter>
+    <style>
+      .sans { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .mono { font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="940" rx="28" fill="url(#bg)"/>
+  <rect x="64" y="48" width="1472" height="844" rx="22" fill="#FFFFFF" filter="url(#shadow)"/>
+
+  <!-- Window chrome -->
+  <rect x="64" y="48" width="1472" height="72" rx="22" fill="#FFFFFF"/>
+  <path d="M64 120H1536" stroke="#E5ECEA"/>
+  <circle cx="100" cy="84" r="7" fill="#D6E0DE"/>
+  <circle cx="124" cy="84" r="7" fill="#D6E0DE"/>
+  <circle cx="148" cy="84" r="7" fill="#D6E0DE"/>
+  <text x="192" y="91" class="sans" font-size="20" font-weight="650" fill="#163B3B">Research Companion</text>
+  <rect x="1232" y="67" width="130" height="34" rx="9" fill="#F2F6F5"/>
+  <text x="1248" y="89" class="sans" font-size="11" font-weight="600" fill="#5D7270">Assistant: research</text>
+  <rect x="1374" y="67" width="128" height="34" rx="9" fill="#1C3C3C"/>
+  <path d="M1394 78L1406 90M1406 78L1394 90" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+  <text x="1414" y="89" class="sans" font-size="13" font-weight="650" fill="#FFFFFF">New thread</text>
+
+  <!-- Thread rail -->
+  <rect x="64" y="120" width="276" height="772" fill="#F5F8F7"/>
+  <path d="M340 120V892" stroke="#E5ECEA"/>
+  <text x="92" y="164" class="sans" font-size="13" font-weight="750" letter-spacing="1.2" fill="#7C918E">PROJECT THREADS</text>
+  <rect x="88" y="190" width="228" height="44" rx="10" fill="#E0ECE9"/>
+  <circle cx="111" cy="212" r="7" fill="#1C3C3C"/>
+  <text x="130" y="208" class="sans" font-size="14" font-weight="650" fill="#163B3B">Experiment design</text>
+  <text x="130" y="226" class="sans" font-size="11" fill="#78908C">Just now · 3 memories</text>
+  <rect x="88" y="246" width="228" height="44" rx="10" fill="#FFFFFF"/>
+  <circle cx="111" cy="268" r="7" fill="#B7C9C5"/>
+  <text x="130" y="264" class="sans" font-size="14" font-weight="600" fill="#405B58">Changing facts</text>
+  <text x="130" y="282" class="sans" font-size="11" fill="#9AA9A7">Yesterday · 4 changes</text>
+  <rect x="88" y="302" width="228" height="44" rx="10" fill="#FFFFFF"/>
+  <circle cx="111" cy="324" r="7" fill="#B7C9C5"/>
+  <text x="130" y="320" class="sans" font-size="14" font-weight="600" fill="#405B58">A-MEM vs Mem0</text>
+  <text x="130" y="338" class="sans" font-size="11" fill="#9AA9A7">Yesterday · 6 memories</text>
+  <rect x="88" y="382" width="228" height="1" fill="#DDE7E4"/>
+  <text x="92" y="420" class="sans" font-size="13" font-weight="750" letter-spacing="1.2" fill="#7C918E">LOCAL CORPUS</text>
+  <text x="92" y="454" class="sans" font-size="13" fill="#405B58">A-Mem: Agentic Memory</text>
+  <text x="92" y="484" class="sans" font-size="13" fill="#405B58">Mem0: Long-term Memory</text>
+  <text x="92" y="514" class="sans" font-size="13" fill="#405B58">LongMemEval benchmark</text>
+  <rect x="88" y="808" width="228" height="42" rx="10" fill="#EAF2F0"/>
+  <circle cx="110" cy="829" r="10" stroke="#5B7772" stroke-width="1.5"/>
+  <path d="M110 824V834M105 829H115" stroke="#5B7772" stroke-width="1.5" stroke-linecap="round"/>
+  <text x="130" y="834" class="sans" font-size="13" font-weight="650" fill="#315653">Start a fresh thread</text>
+
+  <!-- Main chat -->
+  <rect x="340" y="120" width="736" height="772" fill="#FFFFFF"/>
+  <text x="382" y="166" class="sans" font-size="14" font-weight="700" fill="#6E8581">THREAD · EXPERIMENT DESIGN</text>
+  <text x="382" y="205" class="sans" font-size="23" font-weight="700" fill="#163B3B">Smallest experiment for changing facts</text>
+  <rect x="382" y="232" width="652" height="1" fill="#EDF2F1"/>
+
+  <!-- User message -->
+  <rect x="548" y="270" width="486" height="62" rx="14" fill="#E8F4F8"/>
+  <text x="574" y="296" class="sans" font-size="15" fill="#164C69">Design the smallest experiment for my project,</text>
+  <text x="574" y="318" class="sans" font-size="15" fill="#164C69">and explain our choices.</text>
+  <circle cx="1000" cy="294" r="13" fill="#076699"/>
+  <text x="996" y="299" class="sans" font-size="11" font-weight="750" fill="#FFFFFF">D</text>
+
+  <!-- Assistant response -->
+  <circle cx="412" cy="386" r="16" fill="#1C3C3C"/>
+  <path d="M405 387L412 380L419 387L412 394L405 387Z" stroke="#DFF0EC" stroke-width="1.5"/>
+  <text x="442" y="387" class="sans" font-size="15" font-weight="750" fill="#163B3B">Research Companion</text>
+  <text x="382" y="428" class="sans" font-size="15" fill="#334F4B">Given the one-week constraint, compare two memory strategies:</text>
+  <text x="382" y="454" class="sans" font-size="15" fill="#334F4B">1. fact reconciliation only, and 2. reconciliation plus links.</text>
+  <text x="382" y="480" class="sans" font-size="15" fill="#334F4B">Measure retrieval quality after a controlled fact change.</text>
+
+  <!-- Plan -->
+  <rect x="382" y="520" width="652" height="126" rx="12" fill="#F8FAFA" stroke="#E3EBE8"/>
+  <text x="406" y="549" class="sans" font-size="12" font-weight="750" letter-spacing="1" fill="#76908B">PLAN</text>
+  <circle cx="409" cy="578" r="7" fill="#1C3C3C"/>
+  <path d="M406 578L408 580L413 575" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="428" y="583" class="sans" font-size="14" fill="#405B58">Define fact-change scenarios</text>
+  <circle cx="409" cy="610" r="7" fill="#1C3C3C"/>
+  <path d="M406 610L408 612L413 607" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="428" y="615" class="sans" font-size="14" fill="#405B58">Run current vs historical retrieval</text>
+  <circle cx="409" cy="642" r="7" fill="#1C3C3C"/>
+  <path d="M406 642L408 644L413 639" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="428" y="647" class="sans" font-size="14" fill="#405B58">Write a cited comparison report</text>
+
+  <!-- Tool activity -->
+  <rect x="382" y="672" width="652" height="48" rx="9" fill="#F0F5F3"/>
+  <circle cx="407" cy="696" r="8" fill="#FFFFFF" stroke="#B8CCC7"/>
+  <path d="M403 696L406 699L412 692" stroke="#2D7167" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="427" y="701" class="sans" font-size="14" font-weight="650" fill="#405B58">read_paper</text>
+  <text x="522" y="701" class="sans" font-size="13" fill="#7A918D">A-MEM · Mem0 · LongMemEval</text>
+  <text x="962" y="701" class="sans" font-size="12" font-weight="650" fill="#2D7167">complete</text>
+
+  <!-- Composer -->
+  <rect x="382" y="766" width="652" height="82" rx="14" fill="#FFFFFF" stroke="#C9DAD6" stroke-width="1.5" filter="url(#smallShadow)"/>
+  <text x="408" y="799" class="sans" font-size="14" fill="#9BAEAA">Ask about your research project…</text>
+  <circle cx="994" cy="814" r="21" fill="#1C3C3C"/>
+  <path d="M985 814H1003M996 807L1003 814L996 821" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Memory panel -->
+  <rect x="1076" y="120" width="460" height="772" fill="#F5F8F7"/>
+  <path d="M1076 120V892" stroke="#E5ECEA"/>
+  <text x="1110" y="166" class="sans" font-size="14" font-weight="750" fill="#163B3B">PROJECT MEMORY</text>
+  <text x="1110" y="192" class="sans" font-size="12" fill="#708681">research-demo · 3 recalled · 2 changed</text>
+  <rect x="1110" y="220" width="380" height="38" rx="8" fill="#E0ECE9"/>
+  <text x="1132" y="245" class="sans" font-size="13" font-weight="700" fill="#1C3C3C">Recalled</text>
+  <text x="1230" y="245" class="sans" font-size="13" fill="#6C827E">Changes</text>
+  <text x="1325" y="245" class="sans" font-size="13" fill="#6C827E">Connections</text>
+  <rect x="1110" y="284" width="380" height="172" rx="12" fill="#FFFFFF" stroke="#DDE8E4"/>
+  <text x="1132" y="316" class="sans" font-size="14" font-weight="700" fill="#163B3B">The project has one week</text>
+  <text x="1132" y="341" class="sans" font-size="12" fill="#6D837F">preference · user · active</text>
+  <rect x="1132" y="361" width="4" height="60" rx="2" fill="#2D7167"/>
+  <text x="1148" y="377" class="sans" font-size="12" fill="#526A65">“I only have a week. Let’s focus</text>
+  <text x="1148" y="396" class="sans" font-size="12" fill="#526A65">on handling changing facts.”</text>
+  <text x="1132" y="438" class="mono" font-size="10" fill="#8A9D99">source: demo-user-1 · direct match</text>
+  <rect x="1110" y="472" width="380" height="172" rx="12" fill="#FFFFFF" stroke="#DDE8E4"/>
+  <text x="1132" y="504" class="sans" font-size="14" font-weight="700" fill="#163B3B">A-MEM links notes as they evolve</text>
+  <text x="1132" y="529" class="sans" font-size="12" fill="#6D837F">finding · paper · active</text>
+  <rect x="1132" y="549" width="4" height="60" rx="2" fill="#D39A42"/>
+  <text x="1148" y="565" class="sans" font-size="12" fill="#526A65">Context and links can improve</text>
+  <text x="1148" y="584" class="sans" font-size="12" fill="#526A65">retrieval without rewriting facts.</text>
+  <text x="1132" y="626" class="mono" font-size="10" fill="#8A9D99">paper:amem:methodology · linked match</text>
+  <rect x="1110" y="676" width="380" height="1" fill="#DDE7E4"/>
+  <text x="1110" y="716" class="sans" font-size="13" font-weight="700" fill="#506B66">Memory status</text>
+  <circle cx="1120" cy="746" r="6" fill="#2D7167"/>
+  <text x="1138" y="751" class="sans" font-size="13" fill="#506B66">Ready · evidence-backed</text>
+  <text x="1110" y="798" class="sans" font-size="12" fill="#8A9D99">Inspect sources, versions, operations,</text>
+  <text x="1110" y="818" class="sans" font-size="12" fill="#8A9D99">and immediate connections on demand.</text>
+</svg>

@@ -1,0 +1,7 @@
+{
+  "papers": [
+    {"id": "amem", "url": "https://arxiv.org/html/2502.12110v11", "sections": ["S3", "S6"]},
+    {"id": "mem0", "url": "https://arxiv.org/html/2504.19413v1", "sections": ["S2", "S5"]},
+    {"id": "longmemeval", "url": "https://arxiv.org/html/2410.10813v2", "sections": ["S2", "S3"]}
+  ]
+}
