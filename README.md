@@ -224,17 +224,3 @@ The default database is `data/runtime/memory.sqlite3`. It is ignored by Git and 
 ├── PLAN.md                # original project plan and milestone history
 └── README.md
 ```
-
-## Limitations and scope
-
-This is a focused local demo, not a production deployment or a reproduction of the papers' published results.
-
-- single user, one configured research project, local SQLite;
-- no authentication, cloud deployment, background queues, or multi-user isolation;
-- no arbitrary PDF ingestion, OCR, live web search, or external account integrations;
-- the scripted mode uses bounded pattern recognition and lexical retrieval, not general model reasoning;
-- live model and embedding quality depends on the configured provider and has not been benchmarked here;
-- the current context packer uses a conservative serialized UTF-8 byte bound rather than a tokenizer-aware token count;
-- browser smoke testing was skipped; automated backend and frontend validation is documented in the project history.
-
-The paper corpus contains selected text extracts, not complete papers. See [`data/papers/README.md`](data/papers/README.md) for attribution and source links.
